@@ -29,5 +29,7 @@ public class Phone {
     public static void main(String[] args) {
         Phone phone1 = new Phone("Motorola", 64);
         Phone phone2 = new Phone("Nokia", 32);
+
+
     }
 }
