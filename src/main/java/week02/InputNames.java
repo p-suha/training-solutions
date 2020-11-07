@@ -7,7 +7,7 @@ public class InputNames {
     public static void main(String[] args) {
 
         Scanner scanner = new Scanner(System.in);
-       String[] nevek = new String[5];
+        String[] nevek = new String[5];
 
         for (int i = 0; i < 5; i++) {
 
@@ -17,7 +17,7 @@ public class InputNames {
 
         }
 
-        for (int i=0; i < nevek.length; i++) {
+        for (int i = 0; i < nevek.length; i++) {
             System.out.println(nevek[i]);
         }
     }
