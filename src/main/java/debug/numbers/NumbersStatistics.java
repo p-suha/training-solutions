@@ -22,10 +22,16 @@ public class NumbersStatistics {
     }
 
     public int minDifferenceBetweenNeighbours() {
+
+        /* EZT Honnan kellett volna tudnom? Mi kerülte el a figyelmem? És ha most outofindex hiba van, akkor nem jó a megoldásom?
+         if (numbers.size() < 2) {
+            throw new IllegalStateException("Not enough numbers.");
+        }
+        */
         int minDifference = numbers.get(0) - numbers.get(1) >= 0 ? numbers.get(0) - numbers.get(1) : numbers.get(1) - numbers.get(0);
         for(int i = 0; i < numbers.size() - 1; i++) {
             int actDifference = numbers.get(i) - numbers.get(i + 1);
-            if(Math.abs(actDifference)< Math.abs(minDifference)) {
+            if(Math.abs(actDifference)< Math.abs(minDifference)) { // Ezek szerint ez sem jó, mert nem használhatok math.abs-ot? :((
                 minDifference = actDifference;
             }
         }
