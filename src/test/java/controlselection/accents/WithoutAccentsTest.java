@@ -1,4 +1,4 @@
-package accents;
+package controlselection.accents;
 
 import controlselection.accents.WithoutAccents;
 import org.junit.jupiter.api.Test;
