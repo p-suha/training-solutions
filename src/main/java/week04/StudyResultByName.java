@@ -10,4 +10,11 @@ public class StudyResultByName {
         this.studyAverage = studyAverage;
     }
 
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public double getStudyAverage() {
+        return studyAverage;
+    }
 }
