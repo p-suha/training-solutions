@@ -1,4 +1,4 @@
-package week04;
+package schoolrecords;
 
 public class Subject {
 
