@@ -10,12 +10,20 @@ public class Mark {
 
         this.markType = markType;
 
+        if (subject == null) {
+            throw new NullPointerException("Both subject and tutor must be provided!");
+        }
+        if (tutor == null) {
+            throw new NullPointerException("Both subject and tutor must be provided!");
+        }
+
         this.subject = subject;
         this.tutor = tutor;
     }
 
     public Mark(String markType, Subject subject, Tutor tutor) {
         this.markType = MarkType.valueOf(markType);
+
         this.subject = subject;
         this.tutor = tutor;
     }
@@ -29,6 +37,7 @@ public class Mark {
     }
 
     public Subject getSubject() {
+
         return subject;
     }
 

@@ -17,16 +17,20 @@ public class Tutor {
         return name;
     }
 
-    public boolean tutorTeachingSubject(Subject tantargyTanitjaE) {
-        boolean is = false;
+    public List<Subject> getTaughtSubjects() {
+        return taughtSubjects;
+    }
+
+    public boolean tutorTeachingSubject(Subject subject) {
 
         for (Subject item : taughtSubjects) {
 
-            if (item.getSubjectName().equals(tantargyTanitjaE.getSubjectName())) {
-                is = true;
+            if (item.getSubjectName().equals(subject.getSubjectName())) {
+                return true;
             }
-
         }
-        return is;
+
+        return false;
+
     }
 }
