@@ -49,7 +49,7 @@ public class Student {
         List<Mark> temp = new ArrayList<>();
         for (Mark mark : marks) {
 
-            if (mark.getSubject().equals(subject)) {
+            if (mark.getSubject().getSubjectName().equals(subject.getSubjectName())) {
                 temp.add(mark);
             }
         }

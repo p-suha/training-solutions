@@ -44,107 +44,109 @@ public class ClassRecordsTest {
         classRecords.addStudent(thirdStudent);
     }
 
-//    @Test
-//    public void testCreate() {
-//        assertEquals("Fourth Grade A", classRecords.getClassName());
-//    }
-//
-//    @Test
-//    public void testAddStudentAlreadyExists() {
-//        assertFalse(classRecords.addStudent(new Student("Nagy Béla")));
-//    }
-//
-//    @Test
-//    public void testAddStudent() {
-//        assertTrue(classRecords.addStudent(new Student("Nagy Klára")));
-//    }
-//
-//    @Test
-//    public void testRemoveStudent() {
-//        assertTrue(classRecords.removeStudent(new Student("Nagy Béla")));
-//    }
-//
-//    @Test
-//    public void testRemoveStudentDoesNotExists() {
-//        assertFalse(classRecords.removeStudent(new Student("Nagy Klára")));
-//    }
-//
-//    @Test
-//    public void emptyStudentListShouldThrowException() throws ArithmeticException {
-//
-//        Exception ex = assertThrows(ArithmeticException.class, () -> new ClassRecords("First Grade", new Random()).calculateClassAverage());
-//        assertEquals("No student in the class, average calculation aborted!", ex.getMessage());
-//
-//    }
-//
-//    @Test
-//    public void noMarksShouldThrowException() throws ArithmeticException {
-//
-//
-//        ClassRecords classRecords = new ClassRecords("First Grade", new Random());
-//        classRecords.addStudent(new Student("Nagy Béla"));
-//
-//
-//        Exception ex = assertThrows(ArithmeticException.class, () -> classRecords.calculateClassAverage());
-//        assertEquals("No marks present, average calculation aborted!", ex.getMessage());
-//    }
-//
-//    @Test
-//    public void testCalculateClassAverage() {
-//        assertEquals(3.33, classRecords.calculateClassAverage());
-//    }
-//
-//    @Test
-//    public void testCalculateClassAverageBySubject() {
-//        //Given
-//        Subject geography = new Subject("földrajz");
-//        //Then
-//        assertEquals(2.75, classRecords.calculateClassAverageBySubject(geography));
-//    }
-//
-//    @Test
-//    public void emptyStudentNameShouldThrowException() throws IllegalArgumentException {
-//        Exception ex = assertThrows(IllegalArgumentException.class, () -> classRecords.findStudentByName(""));
-//        assertEquals("Student name must not be empty!", ex.getMessage());
-//    }
-//
-//    @Test
-//    public void emptyListShouldThrowException() throws IllegalStateException {
-//        Exception ex = assertThrows(IllegalStateException.class, () -> new ClassRecords("First Grade", new Random()).findStudentByName("Kovács Rita"));
-//        assertEquals("No students to search!", ex.getMessage());
-//    }
-//
-//    @Test
-//    public void nonExistingStudentShouldThrowException() throws IllegalArgumentException {
-//        Exception ex = assertThrows(IllegalArgumentException.class, () -> classRecords.findStudentByName("Kiss Rita"));
-//        assertEquals("Student by this name cannot be found! Kiss Rita", ex.getMessage());
-//    }
-//
-//    @Test
-//    public void testFindStudentByName() {
-//        assertEquals("Kovács Rita", classRecords.findStudentByName("Kovács Rita").getName());
-//    }
-//
-//    @Test
-//    public void emptyListException() throws IllegalStateException {
-//        Exception ex = assertThrows(IllegalStateException.class, () -> new ClassRecords("Fourth Grade", new Random()).repetition());
-//        assertEquals("No students to select for repetition!", ex.getMessage());
-//    }
-//
-//    @Test
-//    public void testRepetition() {
-//        assertEquals("Varga Márton", classRecords.repetition().getName());
-//    }
-//
-//    @Test
-//    public void testListStudyResults() {
-//        //Given
-//        List<StudyResultByName> list = classRecords.listStudyResults();
-//        //Then
-//        assertEquals("Kovács Rita", list.get(0).getStudentName());
-//        assertEquals(3.33, list.get(0).getStudyAverage());
-//        assertEquals(3, list.size());
-//    }
+    @Test
+    public void testCreate() {
+        assertEquals("Fourth Grade A", classRecords.getClassName());
+    }
+
+    @Test
+    public void testAddStudentAlreadyExists() {
+        assertFalse(classRecords.addStudent(new Student("Nagy Béla")));
+    }
+
+    @Test
+    public void testAddStudent() {
+        assertTrue(classRecords.addStudent(new Student("Nagy Klára")));
+    }
+
+    //
+    @Test
+    public void testRemoveStudent() {
+        assertTrue(classRecords.removeStudent(new Student("Nagy Béla")));
+    }
+
+    @Test
+    public void testRemoveStudentDoesNotExists() {
+        assertFalse(classRecords.removeStudent(new Student("Nagy Klára")));
+    }
+
+    @Test
+    public void emptyStudentListShouldThrowException() throws ArithmeticException {
+
+        Exception ex = assertThrows(ArithmeticException.class, () -> new ClassRecords("First Grade", new Random()).calculateClassAverage());
+        assertEquals("No student in the class, average calculation aborted!", ex.getMessage());
+
+    }
+
+    @Test
+    public void noMarksShouldThrowException() throws ArithmeticException {
+
+
+        ClassRecords classRecords = new ClassRecords("First Grade", new Random());
+        classRecords.addStudent(new Student("Nagy Béla"));
+
+
+        Exception ex = assertThrows(ArithmeticException.class, () -> classRecords.calculateClassAverage());
+        assertEquals("No marks present, average calculation aborted!", ex.getMessage());
+    }
+
+    //
+    @Test
+    public void testCalculateClassAverage() {
+        assertEquals(3.33, classRecords.calculateClassAverage());
+    }
+
+    @Test
+    public void testCalculateClassAverageBySubject() {
+        //Given
+        Subject geography = new Subject("földrajz");
+        //Then
+        assertEquals(2.75, classRecords.calculateClassAverageBySubject(geography));
+    }
+
+    @Test
+    public void emptyStudentNameShouldThrowException() throws IllegalArgumentException {
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> classRecords.findStudentByName(""));
+        assertEquals("Student name must not be empty!", ex.getMessage());
+    }
+
+    @Test
+    public void emptyListShouldThrowException() throws IllegalStateException {
+        Exception ex = assertThrows(IllegalStateException.class, () -> new ClassRecords("First Grade", new Random()).findStudentByName("Kovács Rita"));
+        assertEquals("No students to search!", ex.getMessage());
+    }
+
+    @Test
+    public void nonExistingStudentShouldThrowException() throws IllegalArgumentException {
+        Exception ex = assertThrows(IllegalArgumentException.class, () -> classRecords.findStudentByName("Kiss Rita"));
+        assertEquals("Student by this name cannot be found! Kiss Rita", ex.getMessage());
+    }
+
+    @Test
+    public void testFindStudentByName() {
+        assertEquals("Kovács Rita", classRecords.findStudentByName("Kovács Rita").getName());
+    }
+
+    @Test
+    public void emptyListException() throws IllegalStateException {
+        Exception ex = assertThrows(IllegalStateException.class, () -> new ClassRecords("Fourth Grade", new Random()).repetition());
+        assertEquals("No students to select for repetition!", ex.getMessage());
+    }
+
+    @Test
+    public void testRepetition() {
+        assertEquals("Varga Márton", classRecords.repetition().getName());
+    }
+
+    @Test
+    public void testListStudyResults() {
+        //Given
+        List<StudyResultByName> list = classRecords.listStudyResults();
+        //Then
+        assertEquals("Kovács Rita", list.get(0).getStudentName());
+        assertEquals(3.33, list.get(0).getStudyAverage());
+        assertEquals(3, list.size());
+    }
 
     @Test
     public void testListStudentNames() {

@@ -9,7 +9,7 @@ public class Product {
 
     public Product(String name, int year, int month, int day) {
         this.name = name;
-        this.expire = LocalDate.parse(year + "-" + stringFormatter(month) + "-" + stringFormatter(day));
+        this.expire = LocalDate.of(year, month, day);
     }
 
     public String getName() {
@@ -20,14 +20,6 @@ public class Product {
         return expire;
     }
 
-    private String stringFormatter(int tostring) {
 
-        String formattedString = Integer.toString(tostring);
-        if (tostring < 10) {
-            formattedString = "0" + tostring;
-        }
-
-        return formattedString;
-    }
 
 }
