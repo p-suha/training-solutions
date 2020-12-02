@@ -1,0 +1,54 @@
+package methodstructure.pendrives;
+
+public class Pendrive {
+
+    private String name;
+    private int capacity;
+    private int price;
+
+    public Pendrive(String name, int capacity, int price) {
+        this.name = name;
+        this.capacity = capacity;
+        this.price = price;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String toString() {
+        return "Név: " + name + "Kapacitás: " + capacity + "Ár: " + price;
+    }
+
+    public void risePrice(int plusPercent) {
+        this.price += this.price * (plusPercent / 100.0);
+    }
+
+    public int comparePricePerCapacity(Pendrive otherPendrive) {
+
+        double pricePerCapacity = (double) price / capacity;
+        double otherPricePerCapacity = (double) otherPendrive.price / otherPendrive.capacity;
+        if (pricePerCapacity > otherPricePerCapacity) {
+            return 1;
+        } else if (pricePerCapacity < otherPricePerCapacity) {
+            return -1;
+        }
+        return 0;
+
+    }
+
+    public boolean cheaperThan(Pendrive otherPendrive) {
+        return getPrice() < otherPendrive.getPrice();
+
+    }
+}
+
