@@ -4,6 +4,7 @@ public class TestMain {
 
     public static void main(String[] args) {
 
+        Vehicle kismotor = new MotorCycle(3);
         Vehicle veh = new Vehicle();
         Car car = new Car();
         Car car2 = new Car(TransmissionType.SEQUENTIAL);
@@ -13,6 +14,7 @@ public class TestMain {
         Car kamion = new Truck(7, TransmissionType.MANUAL);
         MotorCycle motorkerekpar = new MotorCycle(6, TransmissionType.SEQUENTIAL);
 
+        System.out.println(kismotor.getNumberOfGears() + " - " + kismotor.getTransmissionType());
         System.out.println(veh.getNumberOfGears() + " - " + veh.getTransmissionType());
         System.out.println(car.getNumberOfGears() + " - " + car.getTransmissionType());
         System.out.println(car2.getNumberOfGears() + " - " + car2.getTransmissionType());
