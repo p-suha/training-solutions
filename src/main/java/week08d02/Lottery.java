@@ -19,10 +19,10 @@ public class Lottery {
 
         List<Integer> sorsoltNumbers = new ArrayList<>();
         Random rnd = new Random();
-        int theNumber;
+
         while (sorsoltNumbers.size() < numbers) {
 
-            theNumber = rnd.nextInt(interval) + 1;
+            int theNumber = rnd.nextInt(interval) + 1;
 
             if (isUnique(sorsoltNumbers, theNumber)) {
                 sorsoltNumbers.add(theNumber);

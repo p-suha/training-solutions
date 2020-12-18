@@ -21,7 +21,6 @@ public class Robot {
             } else if (route.charAt(i) == 'F') {
                 y++;
             } else if (route.charAt(i) == 'L') {
-
                 y--;
             }
         }
