@@ -8,7 +8,7 @@ public class Calculator {
 
         int sum = 0;
 
-        if (arr.length < 5) {
+        if (arr.length < 4) {
             throw new IllegalArgumentException("Required minimum four elements");
         }
         Arrays.sort(arr);
@@ -20,10 +20,4 @@ public class Calculator {
         return sum;
     }
 
-    public static void main(String[] args) {
-
-        Calculator calc = new Calculator();
-        int result = calc.findMinSum(new int[]{8, -1, 1, 2, 6, 3, 5, 4});
-        System.out.println(result);
-    }
 }
