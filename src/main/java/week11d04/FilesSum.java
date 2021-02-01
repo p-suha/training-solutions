@@ -11,8 +11,7 @@ public class FilesSum {
 
         try {
             String fileContent = Files.readString(Path.of(name));
-            int number = Integer.parseInt(fileContent);
-            return number;
+            return Integer.parseInt(fileContent);
         } catch (IOException e) {
             throw new IllegalStateException("Can not read file", e);
         }
