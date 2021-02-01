@@ -15,7 +15,7 @@ public class FileManager {
         this.myFile = Path.of(myFilePath);
     }
 
-    public List<Human> getHumanList() {
+    public List<Human> getHumans() {
         return humanList;
     }
 
