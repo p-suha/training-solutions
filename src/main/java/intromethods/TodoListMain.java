@@ -1,6 +1,4 @@
-package intromethod;
-
-import java.util.Arrays;
+package intromethods;
 
 public class TodoListMain {
 
