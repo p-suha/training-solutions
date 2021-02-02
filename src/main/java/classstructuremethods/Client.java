@@ -1,4 +1,4 @@
-package classtructuremethods;
+package classstructuremethods;
 
 public class Client {
 
