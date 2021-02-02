@@ -1,4 +1,4 @@
-package wek06d01;
+package week06d01;
 
 import java.util.ArrayList;
 import java.util.Arrays;

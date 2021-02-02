@@ -1,7 +1,4 @@
-package week6d04;
-
-import java.text.DateFormat;
-import java.time.LocalDate;
+package week06d04;
 
 public class Item {
 

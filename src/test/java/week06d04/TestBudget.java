@@ -1,8 +1,6 @@
 package week06d04;
 
 import org.junit.jupiter.api.Test;
-import week6d04.Budget;
-import week6d04.Item;
 
 import java.util.ArrayList;
 import java.util.List;

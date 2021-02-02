@@ -1,12 +1,9 @@
 package week06d01;
 
 import org.junit.jupiter.api.Test;
-import stringscanner.StringScanner;
-import wek06d01.ListSelector;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;

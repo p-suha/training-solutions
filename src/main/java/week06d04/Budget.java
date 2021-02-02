@@ -1,6 +1,5 @@
-package week6d04;
+package week06d04;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 

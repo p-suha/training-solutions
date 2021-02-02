@@ -3,13 +3,8 @@ package week06d02;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import schoolrecords.ClassRecords;
-import schoolrecords.Subject;
-import schoolrecords.Tutor;
-import wek06d01.ListSelector;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class StoreTest {
