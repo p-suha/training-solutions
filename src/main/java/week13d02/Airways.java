@@ -20,7 +20,6 @@ public class Airways {
     public String getJaratId() {
         return jaratId;
     }
-
     public String getIrany() {
         return irany;
     }
